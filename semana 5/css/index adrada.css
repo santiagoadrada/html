@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100;
+}
+body{
+    font-family: tahora;
+    font-size: 18;
+    background-image:url(../IMG/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat:no-repeat ;
+    background-attachment: fixed;
+}
+#header{
+    background-color: rgb(208, 209, 223);
+    border:2px solid rgba(118, 29, 235, 0.986);
+    border-radius: 20px 20px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;/* css grid */;
+}
+ul{
+    padding: 0 0;
+    margin:0 1px;
+}
+li{ 
+    display: inline;
+    list-style: none;
+    margin: 0 5px;
+    font: bold 12px Verdana;
+}
+a{
+    color: white;
+    text-decoration: none; 
+}
+#menu{
+    grid-area: nav;
+    background-color: rgb(136, 146, 238);
+    border:2px solid rgb(97, 26, 230);
+    border-radius: 22px;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 5px;
+    margin:5px;
+}
+#buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding:0px 0px;
+    border-radius:40px;
+    border:0px;
+    padding-right: 50px;
+    transition: 0.8s ease;
+}
+#buscarbox input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none; 
+}
+#main{
+    grid-area: main;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+    border:2px solid rgb(103, 30, 240);
+    max-width: 100%;
+    height: auto;
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px 5px;
+}
+.programa{
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid rgb(136, 146, 238);
+    border-radius: 15px 15px;
+}
+section article{
+    background-color: rgba(235, 229, 229, 0.6);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+}
+#sidebar{
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+#footer{
+    grid-area: footer;/* css grid */
+    padding-top: 20px;
+    border:2px solid rgb(115, 11, 233);
+    border-radius: 20px ;
+    clear:both;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+}
+#redes a {
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(1.5);
+}
+i[class^="fa"]{
+    color:black;
+    font-size: 20px;
+    border: 1px solid transparent ;
+}
+/* SECCION DE CSS GRID EN DISEÑO WED EWSONSIVE */
+/* DEFINICION DE CONTENEDOR GRID PARA PC 3 COLUMNAS */
+#grid-container > * {
+    text-align: center;
+    box-shadow: 3px 3px 7px 0px rgb(127, 109, 226);
+}
+#grid-container{
+    display:grid;
+    grid-gap:10px;
+    grid-template:
+    "header header header" 150px
+    "nav nav nav" 50px
+    "main main sidebar" 300px
+    "main main sidebar" 300px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1000px 150px 300px;
+}
+/* DEFINICION DE CONTENEDOR GRID TABLET 2 COLUMNAS */
+    @media (max-width:1024px){
+        #grid-container{
+            grid-template:
+            "header header" 170px
+            "nav main" 800px
+            "nav main" 700px
+            "sidebar sidebar" 650px
+            "footer footer" 100px /
+            250px 450px;
+}
+H1{
+    font-size: 75%;
+}
+#menu{
+    backqround-color:rgb(171, 108, 223);
+    border-radius: 22px;
+    display: block;
+    padding: 45px;
+    margin:40px;
+    height: auto;
+    text-align: center;
+}
+#main{
+    display: flex;
+    flex-direction: column;/* cambia la forma de direccion de fila a col*/
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;/*se define el auto ajuste de ancho dispostivo pasa a sgte. linea*/
+    max-width:100%;
+}
+.programa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgb(74, 11, 221);
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+#buscarbox{
+    display:block;
+    padding: 5px;
+}
+}
+/* definicion contenedor grid celular 1 columna */
+    @media (max-width:640px){}
+        #grid-container{
+            grid-template:
+            "header" 150px
+            "nav" 50px
+            "main" 1120px
+            "sidebar" 800px
+            "footer" 100px /
+500px;
+font-size: 60%;
+}
+/* Nota: la barra <nav> se programará con javascript_
+por medio de funciones en boton hamburguesa*/
+#menu{
+    display: none;/* se oculta contenedor nav opciones*/
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100;
+    height: auto;
+}
+.programa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+iframe[
+    max
+]
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="./css/frmcontacto.css">
+</head>
+<body>
+    <header>
+        <img src="./IMG/incap.png" alt="" width="100">
+        <h1>formulario incap</h1>
+    </header>
+<nav>
+    <p>este formulario es para registrar el ingreso de un estudiante a incap</p>
+</nav>
+<section>
+        <form action=""> 
+            <fieldset>
+                <iabel for="">nombre completo</iabel>
+                <uinpurt type="text"
+                placeholder="ingrese su nombre"
+                autofocus required> <br></br>
+                <iabel for="">EMAIL</iabel>
+                <input type="email" name="email" id="" placeholder="ingrese su correo personal"
+                required><br><br>
+                <iabel for="">contraseña</iabel>
+                <input type="password" name="contraseña" placeholder="ingrese su contraseña personal"required><br></br>
+                <!-- seccion de control checkbox-->
+                <iabel for="">selecione tus hobbis</iabel>
+                <br>
+                <input type="checkbox">cine
+                <input type="checkbox">lecture
+                <input type="checkbox">deporte
+                <br><br>
+
+                <!--secion de control radio-->
+                <iabel for="">estado civil</iabel>
+                <input type="radio" value="soltero"> soltero(a)
+                <input type="radio" value="casado"> casado(a)
+                <input type="radio" value="viudo"> viudo(a)
+                <br><br>
+                <!-- seccion de control de lista opcional-->
+                <iabel for="">programas tecnicos incap</iabel>
+                <select name="" id="">
+                    <option value="">selecion de programa...</opcion><br>
+                    <option value="sitemas">progrmacion BBDD</opcional><br>
+                    <option  value="diseño">diseño grafico</option><br>
+                    <option  value="contabilidad">contabilidad</option>
+                </selec>
+                <br>
+                <input type="date" title="ingrese su fecha de nacimiento">
+                <br><br>
+                <iabel for="">coloca tu edad</iabel>
+                <input type="number" min="120" title="ingrese su edad">
+                <br><br>
+                <iabel for="">suba su foto resiente</iabel>
+                <input type="file">
+                <br><br>
+                <iabel for="">comentario</iabel>
+                <br>
+                <textarea name="" id="" cols="40" rows="5"></textarea>
+            </fieldset>
+            <br><br>
+            <button type="submit">enviar</button>
+            <buton type="rest">cancelar</buton>
+            <br><br>
+        </section>
+        <footer>
+            <cite>derechos reservados &copy;2023 @santiago</cite>
+        </footer>
+</body>
+</html>

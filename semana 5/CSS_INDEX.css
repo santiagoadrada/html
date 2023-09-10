@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100;
+}
+body{
+    font-family: tahora;
+    font-size: 18;
+    background-image: url(./)
+}
